@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge Abraham Moguel Salazar — Director Estrategia Comercial & Financiera</title>
+  <meta name="description" content="Director de Gestión Comercial Hipotecaria en Grupo Financiero Banorte. +13 años liderando estrategia comercial, planeación financiera y transformación digital a escala nacional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════
+   VARIABLES & RESET
+══════════════════════════════════════════════════ */
+:root {
+  --navy:       #0B1C33;
+  --navy-mid:   #152742;
+  --navy-light: #1E3654;
+  --gold:       #C4923A;
+  --gold-light: #E2B96A;
+  --gold-pale:  rgba(196,146,58,0.10);
+  --silver:     #7A8FA6;
+  --white:      #FFFFFF;
+  --text-dim:   rgba(255,255,255,0.50);
+  --text-soft:  rgba(255,255,255,0.75);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════════════════
+   SCROLL PROGRESS
+══════════════════════════════════════════════════ */
+.scroll-bar {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 2px; z-index: 2000;
+  background: rgba(255,255,255,0.04);
+}
+.scroll-bar-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transition: width 0.08s linear;
+}
+
+/* ══════════════════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 2px; left: 0; right: 0;
+  z-index: 999;
+  padding: 0 60px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
+  border-bottom: 1px solid transparent;
+}
+nav.scrolled {
+  background: rgba(11,28,51,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom-color: rgba(196,146,58,0.10);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px; font-weight: 700;
+  color: var(--white); text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+  display: flex; gap: 36px; list-style: none;
+}
+.nav-links a {
+  font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,0.50);
+  text-decoration: none;
+  letter-spacing: 0.6px;
+  transition: color 0.25s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--gold-light); }
+.nav-links a:hover::after,
+.nav-links a.active::after { transform: scaleX(1); }
+.nav-cta {
+  padding: 8px 22px;
+  border: 1px solid rgba(196,146,58,0.40);
+  border-radius: 2px;
+  color: var(--gold-light);
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.nav-cta:hover {
+  background: rgba(196,146,58,0.08);
+  border-color: var(--gold);
+}
+
+/* ══════════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════════ */
+#hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding: 100px 60px 72px;
+}
+#particles-canvas {
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 50% at 75% 55%, rgba(196,146,58,0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 15% 70%, rgba(21,39,66,0.6) 0%, transparent 55%);
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 400px;
+  gap: 72px; align-items: center;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+}
+
+/* Left column */
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+}
+.hero-eyebrow-line { width: 28px; height: 1px; background: var(--gold); }
+.hero-eyebrow-text {
+  font-size: 10px; font-weight: 700;
+  color: var(--gold); letter-spacing: 3px; text-transform: uppercase;
+}
+h1.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 4.8vw, 64px);
+  font-weight: 900; line-height: 1.06;
+  letter-spacing: -1px; margin-bottom: 18px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2B96A 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-typerow {
+  height: 26px; overflow: hidden; margin-bottom: 26px;
+}
+.hero-typeline {
+  font-size: 14px; color: rgba(255,255,255,0.42);
+  letter-spacing: 0.2px; font-weight: 300;
+}
+.hero-typeline .typed { color: var(--gold-light); font-weight: 500; }
+.hero-typeline .cursor {
+  display: inline-block; width: 1.5px; height: 13px;
+  background: var(--gold); margin-left: 2px;
+  vertical-align: middle;
+  animation: blink .8s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.hero-desc {
+  font-size: 14.5px; line-height: 1.85;
+  color: var(--text-dim); max-width: 500px;
+  margin-bottom: 38px; font-weight: 300;
+}
+.hero-desc strong { color: var(--text-soft); font-weight: 500; }
+
+/* Executive buttons */
+.hero-ctas { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 26px; border-radius: 2px;
+  font-size: 12px; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.8px;
+  transition: background 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s;
+  cursor: pointer; border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  box-shadow: 0 4px 18px rgba(196,146,58,0.22);
+}
+.btn-secondary {
+  background: transparent;
+  border-color: rgba(196,146,58,0.35);
+  color: var(--gold-light);
+}
+.btn-secondary:hover {
+  background: rgba(196,146,58,0.06);
+  border-color: rgba(196,146,58,0.60);
+}
+.btn-tertiary {
+  background: transparent;
+  border-color: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.55);
+}
+.btn-tertiary:hover {
+  border-color: rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.80);
+}
+.btn-icon {
+  width: 16px; height: 16px;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.btn-icon svg { width: 100%; height: 100%; }
+
+/* Right column — photo */
+.hero-photo-col {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.photo-rings { position: absolute; inset: 0; }
+.ring {
+  position: absolute; border-radius: 50%;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.r1 {
+  width: 290px; height: 290px;
+  border: 1px dashed rgba(196,146,58,0.28);
+  animation: spin 22s linear infinite;
+}
+.r2 {
+  width: 338px; height: 338px;
+  border: 1px solid rgba(196,146,58,0.10);
+  animation: spin 34s linear infinite reverse;
+}
+.r3 {
+  width: 386px; height: 386px;
+  border: 1px solid rgba(196,146,58,0.04);
+  animation: spin 52s linear infinite;
+}
+@keyframes spin { from{transform:translate(-50%,-50%) rotate(0)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+
+.photo-frame {
+  width: 252px; height: 252px; border-radius: 50%;
+  border: 1.5px solid rgba(196,146,58,0.55);
+  overflow: hidden; position: relative; z-index: 1;
+  box-shadow: 0 0 0 6px rgba(196,146,58,0.06), 0 24px 60px rgba(0,0,0,0.5);
+}
+.photo-frame img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  display: none;
+}
+.photo-initials {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--navy-mid);
+  font-family: 'Playfair Display', serif;
+  font-size: 60px; font-weight: 700; color: var(--gold);
+}
+
+/* Hero badges */
+.hero-stat-badge {
+  position: absolute; bottom: 8px; right: 12px;
+  background: rgba(11,28,51,0.96);
+  border: 1px solid rgba(196,146,58,0.20);
+  border-radius: 6px; padding: 12px 16px;
+  backdrop-filter: blur(10px); z-index: 2;
+  text-align: left;
+}
+.hsb-label {
+  font-size: 8px; color: var(--silver);
+  letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 6px;
+}
+.hsb-stack {
+  display: flex; flex-wrap: wrap; gap: 5px; max-width: 130px;
+}
+.hsb-chip {
+  font-size: 9px; font-weight: 500;
+  color: rgba(196,146,58,0.80);
+  background: rgba(196,146,58,0.08);
+  border: 1px solid rgba(196,146,58,0.18);
+  border-radius: 2px; padding: 2px 7px;
+  letter-spacing: 0.4px;
+}
+.hero-years-badge {
+  position: absolute; top: 16px; left: 6px;
+  background: rgba(11,28,51,0.96);
+  border: 1px solid rgba(196,146,58,0.15);
+  border-radius: 6px; padding: 10px 14px;
+  backdrop-filter: blur(10px); z-index: 2;
+  text-align: center;
+}
+.hyb-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700; color: var(--gold); line-height: 1;
+}
+.hyb-text {
+  font-size: 8px; color: rgba(255,255,255,0.35);
+  letter-spacing: 1px; text-transform: uppercase; margin-top: 4px;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute; bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  z-index: 2; cursor: pointer; user-select: none;
+}
+.scroll-hint-label {
+  font-size: 8px; color: rgba(255,255,255,0.18);
+  letter-spacing: 2px; text-transform: uppercase;
+}
+.scroll-mouse {
+  width: 18px; height: 30px;
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 9px;
+  position: relative;
+}
+.scroll-wheel {
+  position: absolute; top: 5px; left: 50%;
+  transform: translateX(-50%);
+  width: 3px; height: 6px;
+  background: var(--gold); border-radius: 2px;
+  animation: scroll-anim 2s infinite;
+}
+@keyframes scroll-anim {
+  0%  { top: 5px; opacity: 1; }
+  80% { top: 18px; opacity: 0; }
+  100%{ top: 5px; opacity: 0; }
+}
+
+/* ══════════════════════════════════════════════════
+   SECTION COMMONS
+══════════════════════════════════════════════════ */
+.sec { padding: 96px 60px; }
+.sec-inner { max-width: 1200px; margin: 0 auto; }
+.sec-label {
+  font-size: 9.5px; font-weight: 600;
+  color: var(--gold); letter-spacing: 2.5px; text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 12px;
+}
+.sec-label::before {
+  content: ''; display: block;
+  width: 22px; height: 1px; background: var(--gold);
+}
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 700; line-height: 1.14;
+  color: var(--white); margin-bottom: 52px;
+}
+.sec-title em { color: var(--gold); font-style: normal; }
+
+/* Reveal animations */
+.rv  { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.rvl { opacity: 0; transform: translateX(-36px); transition: opacity .7s ease, transform .7s ease; }
+.rvr { opacity: 0; transform: translateX(36px);  transition: opacity .7s ease, transform .7s ease; }
+.rv.on, .rvl.on, .rvr.on { opacity: 1; transform: none; }
+.d1 { transition-delay: .10s; }
+.d2 { transition-delay: .20s; }
+.d3 { transition-delay: .30s; }
+.d4 { transition-delay: .40s; }
+.d5 { transition-delay: .50s; }
+
+/* ══════════════════════════════════════════════════
+   IMPACTO — KPIs
+══════════════════════════════════════════════════ */
+#impacto {
+  background: var(--navy-mid);
+  background-image: radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,0.02) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+.kpi-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 18px;
+}
+.kpi-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(196,146,58,0.12);
+  border-radius: 8px; padding: 32px 22px 28px;
+  text-align: center; position: relative; overflow: hidden;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+  cursor: default;
+}
+.kpi-card::before {
+  content: '';
+  position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0; transition: opacity .3s;
+}
+.kpi-card:hover {
+  border-color: rgba(196,146,58,0.30);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+}
+.kpi-card:hover::before { opacity: 1; }
+.kpi-ico {
+  width: 32px; height: 32px; margin: 0 auto 18px;
+  color: rgba(196,146,58,0.60);
+  display: flex; align-items: center; justify-content: center;
+}
+.kpi-ico svg { width: 100%; height: 100%; }
+.kpi-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 700; color: var(--gold);
+  line-height: 1; margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+.kpi-lbl {
+  font-size: 11px; color: var(--text-dim);
+  line-height: 1.55; font-weight: 300;
+}
+
+/* ══════════════════════════════════════════════════
+   PERFIL
+══════════════════════════════════════════════════ */
+#perfil { background: var(--navy); }
+.perfil-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: start;
+}
+.perfil-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px; line-height: 1.65; font-style: italic;
+  color: var(--text-soft);
+  border-left: 2px solid var(--gold);
+  padding-left: 22px; margin-bottom: 28px;
+}
+.perfil-body {
+  font-size: 14px; line-height: 1.85;
+  color: var(--text-dim); font-weight: 300;
+}
+.perfil-body strong { color: var(--text-soft); font-weight: 500; }
+.perfil-body p + p { margin-top: 16px; }
+
+/* Pillars */
+.pillars-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.pillar {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(196,146,58,0.09);
+  border-radius: 6px; padding: 20px 18px;
+  transition: all .3s; cursor: default;
+}
+.pillar:hover {
+  background: rgba(196,146,58,0.03);
+  border-color: rgba(196,146,58,0.26);
+  transform: translateY(-2px);
+}
+.pillar-ico {
+  width: 30px; height: 30px;
+  color: rgba(196,146,58,0.55);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.pillar-ico svg { width: 100%; height: 100%; }
+.pillar-name {
+  font-size: 10.5px; font-weight: 700;
+  color: var(--gold-light); letter-spacing: 0.4px;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.pillar-text {
+  font-size: 11.5px; color: rgba(255,255,255,0.38);
+  line-height: 1.65; font-weight: 300;
+}
+
+/* ══════════════════════════════════════════════════
+   TRAYECTORIA
+══════════════════════════════════════════════════ */
+#trayectoria {
+  background: var(--navy-mid);
+  background-image: radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,0.02) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+.timeline {
+  position: relative; padding-left: 44px; max-width: 860px;
+}
+.timeline-line {
+  position: absolute; left: 0; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    var(--gold) 0%,
+    rgba(196,146,58,0.4) 40%,
+    rgba(196,146,58,0.1) 100%);
+}
+.tl-item {
+  position: relative; margin-bottom: 52px;
+}
+.tl-item:last-child { margin-bottom: 0; }
+.tl-dot {
+  position: absolute; left: -51px; top: 7px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--navy-mid);
+  border: 1.5px solid rgba(196,146,58,0.40);
+  box-shadow: 0 0 0 4px rgba(196,146,58,0.05);
+  transition: transform .3s;
+}
+.tl-dot.now {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(196,146,58,0.16), 0 0 14px rgba(196,146,58,0.35);
+}
+.tl-item:hover .tl-dot { transform: scale(1.25); }
+.tl-period {
+  font-size: 10.5px; font-weight: 700;
+  color: var(--gold); letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 5px;
+}
+.tl-co {
+  font-size: 11.5px; color: var(--silver); margin-bottom: 6px;
+}
+.tl-role {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--white); line-height: 1.2; margin-bottom: 16px;
+}
+.tl-tag {
+  display: inline-block;
+  padding: 3px 10px; margin-left: 10px;
+  background: rgba(196,146,58,0.08);
+  border: 1px solid rgba(196,146,58,0.20);
+  border-radius: 2px;
+  font-size: 9px; font-weight: 700;
+  color: var(--gold); letter-spacing: 1px; text-transform: uppercase;
+  vertical-align: middle;
+}
+.tl-bullets { list-style: none; }
+.tl-bullets li {
+  font-size: 13px; color: var(--text-dim);
+  line-height: 1.7; padding-left: 16px; position: relative;
+  margin-bottom: 6px; font-weight: 300;
+}
+.tl-bullets li::before {
+  content: '▸'; position: absolute; left: 0;
+  color: var(--gold); font-size: 9px; top: 4px;
+}
+.tl-bullets li strong { color: var(--text-soft); font-weight: 500; }
+
+/* Actividades Paralelas */
+.tl-parallel {
+  margin-top: 44px; padding-top: 36px;
+  border-top: 1px solid rgba(196,146,58,0.10);
+}
+.tl-parallel-label {
+  font-size: 9px; font-weight: 700;
+  color: rgba(196,146,58,0.55); letter-spacing: 2.5px; text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.tl-parallel-label::after {
+  content: ''; flex: 1; height: 1px;
+  background: rgba(196,146,58,0.10);
+}
+.tl-parallel-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.tl-par-item {
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(196,146,58,0.09);
+  border-radius: 6px; padding: 18px 20px;
+  transition: border-color .3s;
+}
+.tl-par-item:hover { border-color: rgba(196,146,58,0.22); }
+.tl-par-period {
+  font-size: 9.5px; font-weight: 700;
+  color: rgba(196,146,58,0.65); letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.tl-par-role {
+  font-size: 14px; font-weight: 600;
+  color: var(--text-soft); margin-bottom: 6px;
+}
+.tl-par-detail {
+  font-size: 11.5px; color: rgba(255,255,255,0.36);
+  line-height: 1.6; font-weight: 300;
+}
+
+/* ══════════════════════════════════════════════════
+   ECOSISTEMA
+══════════════════════════════════════════════════ */
+#ecosistema { background: var(--navy); }
+.eco-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+}
+.eco-intro {
+  font-size: 14px; line-height: 1.85;
+  color: var(--text-dim); font-weight: 300; margin-bottom: 28px;
+}
+.eco-intro strong { color: var(--text-soft); font-weight: 500; }
+.stakeholders-grid {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.stake-chip {
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  font-size: 12px; color: rgba(255,255,255,0.48);
+  transition: all .25s;
+}
+.stake-chip:hover {
+  background: rgba(196,146,58,0.05);
+  border-color: rgba(196,146,58,0.24);
+  color: var(--gold-light);
+}
+.tech-cat-label {
+  font-size: 9px; font-weight: 700;
+  color: var(--gold); letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(196,146,58,0.12);
+}
+.tech-row { margin-bottom: 28px; }
+.tech-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.tech-chip {
+  display: inline-flex; align-items: center;
+  padding: 6px 13px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  font-size: 12px; color: rgba(255,255,255,0.55);
+  transition: all .25s; font-weight: 400;
+}
+.tech-chip:hover {
+  background: rgba(196,146,58,0.05);
+  border-color: rgba(196,146,58,0.24);
+  color: rgba(255,255,255,0.88);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════════════════
+   FORMACIÓN
+══════════════════════════════════════════════════ */
+#formacion {
+  background: var(--navy-mid);
+  background-image: radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,0.02) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+.form-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
+}
+.form-list { list-style: none; }
+.form-item {
+  border-left: 1px solid rgba(196,146,58,0.22);
+  padding: 0 0 32px 22px; position: relative;
+}
+.form-item:last-child { padding-bottom: 0; }
+.form-item::before {
+  content: '';
+  position: absolute; left: -5px; top: 5px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(196,146,58,0.10);
+}
+.form-year {
+  font-size: 9.5px; font-weight: 700;
+  color: var(--gold); letter-spacing: 1.5px;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.form-title {
+  font-size: 15px; font-weight: 600;
+  color: var(--white); margin-bottom: 4px;
+}
+.form-sub {
+  font-size: 12px; color: var(--silver); margin-bottom: 8px;
+}
+.form-badge {
+  display: inline-block; padding: 2px 9px;
+  background: rgba(196,146,58,0.08);
+  border-radius: 2px;
+  font-size: 8.5px; font-weight: 700;
+  color: var(--gold); letter-spacing: 1px; text-transform: uppercase;
+}
+.form-badge.alt {
+  background: rgba(255,255,255,0.04);
+  color: var(--silver);
+}
+.cert-list { list-style: none; }
+.cert-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: padding-left .25s;
+}
+.cert-item:first-child { padding-top: 0; }
+.cert-item:hover { padding-left: 6px; }
+.cert-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: rgba(196,146,58,0.60); flex-shrink: 0; margin-top: 7px;
+}
+.cert-txt {
+  font-size: 13px; color: rgba(255,255,255,0.52);
+  line-height: 1.55; font-weight: 300;
+}
+.cert-txt strong { color: var(--text-soft); font-weight: 500; }
+
+/* ══════════════════════════════════════════════════
+   CONTACTO
+══════════════════════════════════════════════════ */
+#contacto {
+  background: var(--navy);
+  text-align: center; padding: 120px 60px 100px;
+  position: relative; overflow: hidden;
+}
+.contact-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(196,146,58,0.04) 0%, transparent 70%);
+}
+.contact-label {
+  font-size: 10px; font-weight: 700;
+  color: var(--gold); letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 18px; display: block;
+}
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 700; line-height: 1.15;
+  color: var(--white); margin-bottom: 20px;
+}
+.contact-title em { color: var(--gold); font-style: normal; }
+.contact-sub {
+  font-size: 15px; color: var(--text-dim);
+  max-width: 520px; margin: 0 auto 48px;
+  line-height: 1.75; font-weight: 300;
+}
+.contact-ctas {
+  display: flex; justify-content: center; gap: 12px;
+  flex-wrap: wrap; margin-bottom: 52px;
+}
+.contact-meta {
+  display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+}
+.cm-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,0.35);
+  text-decoration: none; transition: color .25s;
+}
+.cm-item:hover { color: var(--gold-light); }
+.cm-icon {
+  width: 14px; height: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cm-icon svg { width: 100%; height: 100%; }
+
+/* ══════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════ */
+footer {
+  background: rgba(0,0,0,0.22);
+  border-top: 1px solid rgba(196,146,58,0.07);
+  padding: 24px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px; color: rgba(255,255,255,0.28);
+}
+.footer-brand span { color: var(--gold); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.16); }
+
+/* ══════════════════════════════════════════════════
+   MOBILE RESPONSIVE
+══════════════════════════════════════════════════ */
+@media (max-width: 960px) {
+  nav { padding: 0 28px; }
+  .nav-links { display: none; }
+  #hero { padding: 100px 28px 64px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 56px; }
+  .hero-photo-col { order: -1; }
+  .photo-frame { width: 200px; height: 200px; }
+  .r1 { width: 240px; height: 240px; }
+  .r2 { width: 278px; height: 278px; }
+  .r3 { width: 316px; height: 316px; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .perfil-layout,
+  .eco-layout,
+  .form-layout { grid-template-columns: 1fr; gap: 48px; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+  .tl-parallel-grid { grid-template-columns: 1fr; }
+  .sec { padding: 72px 28px; }
+  footer { flex-direction: column; gap: 10px; text-align: center; padding: 20px; }
+}
+@media (max-width: 560px) {
+  .kpi-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .kpi-val { font-size: 30px; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .contact-ctas { flex-direction: column; align-items: center; }
+}
+
+/* Motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── SCROLL PROGRESS ── -->
+<div class="scroll-bar"><div class="scroll-bar-fill" id="sb-fill"></div></div>
+
+<!-- ── NAVIGATION ── -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">Jorge <span>Moguel</span></a>
+  <ul class="nav-links">
+    <li><a href="#impacto">Impacto</a></li>
+    <li><a href="#perfil">Perfil</a></li>
+    <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#ecosistema">Tecnología</a></li>
+    <li><a href="#formacion">Formación</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Contactar</a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="hero-eyebrow-text">Director Ejecutivo · Banca & Finanzas</span>
+      </div>
+      <h1 class="hero-name">Jorge Abraham<br>Moguel Salazar</h1>
+      <div class="hero-typerow">
+        <p class="hero-typeline">
+          Especialista en&nbsp;<span class="typed" id="typed-out"></span><span class="cursor"></span>
+        </p>
+      </div>
+      <p class="hero-desc">
+        <strong>+13 años de trayectoria en Grupo Financiero Banorte</strong>, liderando la
+        dirección comercial del negocio hipotecario nacional con enfoque en
+        <strong>estrategia multicanal, planeación financiera</strong> y transformación
+        digital a gran escala.
+      </p>
+      <div class="hero-ctas">
+        <a href="CV_JorgeMoguel_Executive_v4.html" target="_blank" class="btn btn-primary">
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </span>
+          Descargar CV
+        </a>
+        <a href="https://wa.me/529991998916" target="_blank" class="btn btn-secondary">
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+            </svg>
+          </span>
+          WhatsApp
+        </a>
+        <a href="mailto:jorge.mabconsulting@gmail.com" class="btn btn-tertiary">
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </span>
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Right — photo -->
+    <div class="hero-photo-col">
+      <div class="photo-rings">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+      </div>
+      <div class="photo-frame">
+        <img id="hero-photo" src="" alt="Jorge Abraham Moguel Salazar">
+        <div class="photo-initials" id="hero-initials">JM</div>
+      </div>
+      <div class="hero-stat-badge">
+        <div class="hsb-label">Perfil tecnológico</div>
+        <div class="hsb-stack">
+          <span class="hsb-chip">Power BI</span>
+          <span class="hsb-chip">Salesforce</span>
+          <span class="hsb-chip">Python</span>
+          <span class="hsb-chip">React</span>
+          <span class="hsb-chip">IA</span>
+        </div>
+      </div>
+      <div class="hero-years-badge">
+        <div class="hyb-num">13+</div>
+        <div class="hyb-text">Años en<br>Banorte</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="scroll-hint" onclick="document.getElementById('impacto').scrollIntoView({behavior:'smooth'})">
+    <span class="scroll-hint-label">Scroll</span>
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     IMPACTO
+══════════════════════════════════════════════════ -->
+<section id="impacto" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label rv">Resultados comprobados</div>
+    <h2 class="sec-title rv">Impacto <em>cuantificable</em></h2>
+    <div class="kpi-grid" id="kpi-trigger">
+      <div class="kpi-card rv d1">
+        <div class="kpi-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 21h8m-4-4v4"/><path d="M5 3h14L18 9A6 6 0 016 9L5 3z"/>
+            <path d="M5 3a3 3 0 00-3 3h3M19 3a3 3 0 013 3h-3"/>
+          </svg>
+        </div>
+        <div class="kpi-val"><span class="ctr" data-to="2" data-suffix="°">2°</span></div>
+        <div class="kpi-lbl">Lugar nacional en cartera<br>hipotecaria · Banorte</div>
+      </div>
+      <div class="kpi-card rv d2">
+        <div class="kpi-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <div class="kpi-val"><span class="ctr" data-to="60000" data-prefix="+$" data-suffix=" MDP">+$60,000 MDP</span></div>
+        <div class="kpi-lbl">En colocación hipotecaria<br>anual gestionada</div>
+      </div>
+      <div class="kpi-card rv d3">
+        <div class="kpi-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+          </svg>
+        </div>
+        <div class="kpi-val"><span class="ctr" data-to="60" data-prefix="+" data-suffix="%">+60%</span></div>
+        <div class="kpi-lbl">Crecimiento colocación<br>por campañas comerciales</div>
+      </div>
+      <div class="kpi-card rv d4">
+        <div class="kpi-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <div class="kpi-val"><span class="ctr" data-to="100" data-prefix="+">+100</span></div>
+        <div class="kpi-lbl">Especialistas hipotecarios<br>asesorados y coordinados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PERFIL
+══════════════════════════════════════════════════ -->
+<section id="perfil" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label rv">Sobre mí</div>
+    <h2 class="sec-title rv">Perfil <em>ejecutivo</em></h2>
+    <div class="perfil-layout">
+      <div class="rvl">
+        <blockquote class="perfil-quote">
+          "Evolución sostenida hasta liderar la dirección comercial del negocio hipotecario de Banorte a nivel nacional."
+        </blockquote>
+        <div class="perfil-body">
+          <p>Especializado en la <strong>integración de estrategia comercial</strong>, planeación financiera, gestión de control interno y riesgos para la escalabilidad de unidades de negocio complejas en entornos regulados.</p>
+          <p>Lidera la <strong>expansión y transformación del portafolio hipotecario</strong> a nivel nacional, diseñando modelos comerciales multicanal —sucursales, brokers y desarrollos inmobiliarios— optimizando la rentabilidad y fortaleciendo el posicionamiento competitivo de la institución.</p>
+          <p>Se distingue por su capacidad para <strong>liderar estructuras nacionales</strong>, desarrollar alianzas con actores clave del ecosistema financiero y traducir la estrategia en resultados financieros medibles a gran escala.</p>
+        </div>
+      </div>
+      <div class="rvr">
+        <div class="pillars-grid">
+          <div class="pillar rv d1">
+            <div class="pillar-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <div class="pillar-name">Dirección Comercial</div>
+            <div class="pillar-text">Estrategia hipotecaria nacional · Canales sucursal / broker / desarrollo · Colocación multicanal</div>
+          </div>
+          <div class="pillar rv d2">
+            <div class="pillar-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <div class="pillar-name">Planeación Financiera</div>
+            <div class="pillar-text">P&L · Presupuesto · Rentabilidad de portafolio · KPIs / KRIs · Modelos de incentivos</div>
+          </div>
+          <div class="pillar rv d3">
+            <div class="pillar-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="pillar-name">Control & Riesgos</div>
+            <div class="pillar-text">Matrices de riesgo · Auditoría operativa · Cumplimiento normativo · Mejores prácticas</div>
+          </div>
+          <div class="pillar rv d4">
+            <div class="pillar-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <div class="pillar-name">Innovación Estratégica</div>
+            <div class="pillar-text">Automatización · Analítica de datos · Transformación digital · IA aplicada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     TRAYECTORIA
+══════════════════════════════════════════════════ -->
+<section id="trayectoria" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label rv">Carrera</div>
+    <h2 class="sec-title rv">Trayectoria <em>profesional</em></h2>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="tl-item rv">
+        <div class="tl-dot now"></div>
+        <div class="tl-period">Sep 2023 — Actual</div>
+        <div class="tl-co">Grupo Financiero Banorte · Dirección Nacional · Ciudad de México</div>
+        <div class="tl-role">Director de Gestión Comercial Hipotecaria <span class="tl-tag">Nacional</span></div>
+        <ul class="tl-bullets">
+          <li>Dirige la estrategia hipotecaria comercial —portafolio, presupuesto y tres canales de distribución (sucursales, brokers y desarrollos)— manteniendo la posición <strong>2° lugar nacional</strong> por volumen de cartera hipotecaria.</li>
+          <li>Construye modelos de colocación, formalización y retención multicanal integrando analítica comercial con KPIs de mora, SLA y productividad por canal, con toma de decisiones estratégicas alineadas a la rentabilidad del portafolio.</li>
+          <li>Diseña <strong>estrategias de producto y con bancas especializadas</strong> que han elevado la productividad de formalización multicanal a nivel nacional.</li>
+          <li>Implementa modelos de remuneración impulsando la formalización del crédito y optimizando el balance y la rentabilidad del portafolio.</li>
+          <li>Actúa como representante institucional de Banorte ante <strong>INFONAVIT, FOVISSSTE, fintechs, proptechs</strong>, cámaras empresariales y organismos gubernamentales.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item rv d1">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Sep 2021 — Sep 2023</div>
+        <div class="tl-co">Banorte · Banca Patrimonial y Privada / Casa de Bolsa · Ciudad de México</div>
+        <div class="tl-role">Subdirector de Planeación Financiera</div>
+        <ul class="tl-bullets">
+          <li>Diseñó el modelo de subsegmentación integral de la Banca Patrimonial y Privada para <strong>232 asesores financieros nacionales</strong>: rentabilidad individual, productividad, oferta de valor diferenciada.</li>
+          <li>Lideró el desarrollo e implementación del modelo de <strong>atención remota (Pod de Asesores)</strong>, escalando la cobertura sin incremento estructural y reduciendo costos operativos.</li>
+          <li>Generó ahorro significativo implementando esquemas de incentivos tácticos vinculados a KPIs financieros y de productividad, con visibilidad directa ante comités directivos.</li>
+          <li>Gestionó la implementación tecnológica multiárea (NPS, ISSA, <strong>Salesforce CRM, Power Apps, Power Automate</strong>), integrando 7 equipos.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item rv d2">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Ene 2018 — Sep 2021</div>
+        <div class="tl-co">Banorte · Casa de Bolsa / Banca Patrimonial y Privada · Mérida, Yucatán</div>
+        <div class="tl-role">Subdirector de Gestión y Control</div>
+        <ul class="tl-bullets">
+          <li>Diseñó e institucionalizó la <strong>Matriz de Vulnerabilidad y Susceptibilidad</strong>, herramienta adoptada corporativamente para identificación y mitigación de riesgos en clientes, asesores y contratos de intermediación bursátil.</li>
+          <li>Construyó marcos de control interno ante <strong>Organismos de Control</strong>, elevando el estándar normativo con soporte a <strong>+15 subdirectores nacionales</strong>.</li>
+          <li>Desarrolló el primer <strong>CRM de Gestión y Control</strong> de la Casa de Bolsa (Power Apps / Office 365), aprobado por Comité de Auditoría.</li>
+        </ul>
+      </div>
+
+      <!-- Actividades Paralelas -->
+      <div class="tl-parallel rv d3">
+        <div class="tl-parallel-label">Actividades paralelas</div>
+        <div class="tl-parallel-grid">
+          <div class="tl-par-item">
+            <div class="tl-par-period">2018 — 2022</div>
+            <div class="tl-par-role">Profesor de Cátedra Universitaria</div>
+            <div class="tl-par-detail">Finanzas · Contabilidad · Administración · Mercadotecnia · Auditoría — actividad paralela a gestión directiva</div>
+          </div>
+          <div class="tl-par-item">
+            <div class="tl-par-period">2022 — Actual</div>
+            <div class="tl-par-role">Consultor Fiscal & Tecnológico</div>
+            <div class="tl-par-detail">Asesoría integral a Personas Físicas y PyMEs · Cumplimiento fiscal SAT · Automatización de procesos · Desarrollo de software</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     ECOSISTEMA & TECNOLOGÍA
+══════════════════════════════════════════════════ -->
+<section id="ecosistema" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label rv">Stack & Stakeholders</div>
+    <h2 class="sec-title rv">Tecnología <em>& Ecosistema</em></h2>
+    <div class="eco-layout">
+
+      <div class="rvl">
+        <p class="eco-intro">
+          Perfil híbrido que combina <strong>visión directiva financiera</strong> con capacidades técnicas reales: desde la implementación de CRMs y herramientas analíticas hasta el desarrollo de software y la aplicación de <strong>inteligencia artificial</strong> en procesos de negocio.
+        </p>
+        <div class="tech-row rv d1">
+          <div class="tech-cat-label">Microsoft 365 & Power Platform</div>
+          <div class="tech-chips">
+            <span class="tech-chip">Office 365</span>
+            <span class="tech-chip">Power BI</span>
+            <span class="tech-chip">Power Apps</span>
+            <span class="tech-chip">Power Automate</span>
+            <span class="tech-chip">SharePoint</span>
+            <span class="tech-chip">Excel VBA</span>
+          </div>
+        </div>
+        <div class="tech-row rv d2">
+          <div class="tech-cat-label">CRM & Analytics</div>
+          <div class="tech-chips">
+            <span class="tech-chip">Salesforce CRM</span>
+            <span class="tech-chip">Tableau</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">EDS</span>
+          </div>
+        </div>
+        <div class="tech-row rv d3">
+          <div class="tech-cat-label">Desarrollo & IA Generativa</div>
+          <div class="tech-chips">
+            <span class="tech-chip">TypeScript / JS</span>
+            <span class="tech-chip">React / Next.js</span>
+            <span class="tech-chip">HTML / CSS</span>
+            <span class="tech-chip">IA Generativa</span>
+            <span class="tech-chip">LLMs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rvr">
+        <div class="tech-cat-label" style="margin-bottom:20px">Ecosistema & Stakeholders</div>
+        <div class="stakeholders-grid">
+          <span class="stake-chip">AMPI</span>
+          <span class="stake-chip">INFONAVIT</span>
+          <span class="stake-chip">FOVISSSTE</span>
+          <span class="stake-chip">ABH</span>
+          <span class="stake-chip">CNBV</span>
+          <span class="stake-chip">AMIB</span>
+          <span class="stake-chip">Fintechs</span>
+          <span class="stake-chip">Proptechs</span>
+          <span class="stake-chip">Cámaras empresariales</span>
+          <span class="stake-chip">Gobierno & organismos públicos</span>
+          <span class="stake-chip">Desarrolladores inmobiliarios</span>
+          <span class="stake-chip">Brokers hipotecarios</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FORMACIÓN
+══════════════════════════════════════════════════ -->
+<section id="formacion" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label rv">Academia</div>
+    <h2 class="sec-title rv">Formación <em>& Certificaciones</em></h2>
+    <div class="form-layout">
+      <div class="rvl">
+        <ul class="form-list">
+          <li class="form-item">
+            <div class="form-year">Maestría</div>
+            <div class="form-title">Maestría en Administración</div>
+            <div class="form-sub">Especialidad en Finanzas (MANF) · Tec de Monterrey</div>
+            <span class="form-badge">Titulado</span>
+          </li>
+          <li class="form-item">
+            <div class="form-year">Licenciatura</div>
+            <div class="form-title">Lic. Contaduría Pública</div>
+            <div class="form-sub">Universidad Modelo</div>
+            <span class="form-badge">Titulado</span>
+          </li>
+          <li class="form-item">
+            <div class="form-year">En curso</div>
+            <div class="form-title">Ing. Desarrollo de Software / IA</div>
+            <div class="form-sub">Universidad Hybridge</div>
+            <span class="form-badge alt">En progreso</span>
+          </li>
+        </ul>
+      </div>
+      <div class="rvr">
+        <ul class="cert-list">
+          <li class="cert-item">
+            <div class="cert-dot"></div>
+            <div class="cert-txt"><strong>Dirección Comercial y Ventas</strong> · Tec de Monterrey</div>
+          </li>
+          <li class="cert-item">
+            <div class="cert-dot"></div>
+            <div class="cert-txt"><strong>Formación Liderazgo y Empresas</strong> · ICAMI</div>
+          </li>
+          <li class="cert-item">
+            <div class="cert-dot"></div>
+            <div class="cert-txt"><strong>Asesor en Estrategias de Inversión</strong> · AMIB</div>
+          </li>
+          <li class="cert-item">
+            <div class="cert-dot"></div>
+            <div class="cert-txt"><strong>Administrador Salesforce</strong> · Tec de Monterrey</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     CONTACTO
+══════════════════════════════════════════════════ -->
+<section id="contacto">
+  <div class="contact-glow"></div>
+  <div class="sec-inner" style="position:relative;z-index:1">
+    <span class="contact-label rv">Hablemos</span>
+    <h2 class="contact-title rv">¿Listo para llevar tu organización<br>al <em>siguiente nivel</em>?</h2>
+    <p class="contact-sub rv">
+      Consultor estratégico con enfoque en dirección comercial, transformación financiera
+      y desarrollo tecnológico. Asesoría de alto nivel para organizaciones que buscan
+      resultados medibles en banca, finanzas y procesos de transformación.
+    </p>
+    <div class="contact-ctas rv">
+      <a href="https://wa.me/529991998916" target="_blank" class="btn btn-primary" style="font-size:13px;padding:14px 32px">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+          </svg>
+        </span>
+        WhatsApp
+      </a>
+      <a href="mailto:jorge.mabconsulting@gmail.com" class="btn btn-secondary" style="font-size:13px;padding:14px 32px">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </span>
+        Enviar Email
+      </a>
+    </div>
+    <div class="contact-meta rv d2">
+      <a href="mailto:jorge.mabconsulting@gmail.com" class="cm-item">
+        <span class="cm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </span>
+        jorge.mabconsulting@gmail.com
+      </a>
+      <a href="https://wa.me/529991998916" class="cm-item">
+        <span class="cm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.86a19.79 19.79 0 01-3.07-8.7 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.97a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.73 2.04z"/>
+          </svg>
+        </span>
+        +52 999 199 8916
+      </a>
+      <a href="https://linkedin.com/in/jorge-abraham-moguel-salazar" target="_blank" class="cm-item">
+        <span class="cm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </span>
+        LinkedIn
+      </a>
+      <span class="cm-item">
+        <span class="cm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </span>
+        Ciudad de México
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">Jorge Abraham <span>Moguel</span> Salazar</div>
+  <div class="footer-copy">© 2026 · Director Estrategia Comercial, Financiera & de Procesos</div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════ -->
+<script>
+/* ── SCROLL PROGRESS ── */
+const sbFill = document.getElementById('sb-fill');
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+  sbFill.style.width = pct + '%';
+}, { passive: true });
+
+/* ── NAV SCROLLED CLASS ── */
+const mainNav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 48);
+}, { passive: true });
+
+/* ── ACTIVE NAV LINK ── */
+const navAs = document.querySelectorAll('.nav-links a');
+const allSecs = document.querySelectorAll('section[id]');
+const secObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    }
+  });
+}, { threshold: 0.35 });
+allSecs.forEach(s => secObserver.observe(s));
+
+/* ── REVEAL ON SCROLL ── */
+const revObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.rv, .rvl, .rvr').forEach(el => revObserver.observe(el));
+
+/* ── KPI COUNTER ANIMATION ── */
+function animCounter(el) {
+  const to  = parseInt(el.dataset.to);
+  const pfx = el.dataset.prefix || '';
+  const sfx = el.dataset.suffix || '';
+  const dur = 1800;
+  const t0  = performance.now();
+  (function step(now) {
+    const p = Math.min((now - t0) / dur, 1);
+    const e = 1 - Math.pow(1 - p, 3);
+    const v = Math.round(e * to);
+    el.textContent = pfx + (to >= 1000 ? v.toLocaleString('es-MX') : v) + sfx;
+    if (p < 1) requestAnimationFrame(step);
+  })(t0);
+}
+const kpiObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.ctr').forEach(animCounter);
+      kpiObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+const kpiTrigger = document.getElementById('kpi-trigger');
+if (kpiTrigger) kpiObserver.observe(kpiTrigger);
+
+/* ── TYPEWRITER ── */
+const phrases = [
+  'Estrategia Comercial',
+  'Planeación Financiera',
+  'Control Interno & Riesgos',
+  'Transformación Digital',
+  'Consultoría Estratégica'
+];
+let pi = 0, ci = 0, del = false;
+const typedEl = document.getElementById('typed-out');
+function tick() {
+  const phrase = phrases[pi];
+  typedEl.textContent = del ? phrase.slice(0, --ci) : phrase.slice(0, ++ci);
+  if (!del && ci === phrase.length) { del = true; setTimeout(tick, 2400); return; }
+  if (del && ci === 0)  { del = false; pi = (pi + 1) % phrases.length; }
+  setTimeout(tick, del ? 38 : 68);
+}
+tick();
+
+/* ── PARTICLES CANVAS ── */
+const cvs = document.getElementById('particles-canvas');
+const ctx = cvs.getContext('2d');
+let mouse = { x: -999, y: -999 };
+function resize() { cvs.width = window.innerWidth; cvs.height = window.innerHeight; }
+resize();
+window.addEventListener('resize', resize, { passive: true });
+document.getElementById('hero').addEventListener('mousemove', e => {
+  mouse.x = e.clientX; mouse.y = e.clientY;
+}, { passive: true });
+
+class P {
+  constructor() { this.init(); }
+  init() {
+    this.x  = Math.random() * cvs.width;
+    this.y  = Math.random() * cvs.height;
+    this.r  = Math.random() * 1.2 + 0.3;
+    this.a  = Math.random() * 0.28 + 0.06;
+    this.vx = (Math.random() - 0.5) * 0.24;
+    this.vy = (Math.random() - 0.5) * 0.24;
+    this.gold = Math.random() > 0.58;
+  }
+  update() {
+    const dx = this.x - mouse.x, dy = this.y - mouse.y;
+    const d  = Math.sqrt(dx*dx + dy*dy);
+    if (d < 110 && d > 0) { this.x += dx/d*0.8; this.y += dy/d*0.8; }
+    this.x += this.vx; this.y += this.vy;
+    if (this.x < 0 || this.x > cvs.width)  this.vx *= -1;
+    if (this.y < 0 || this.y > cvs.height) this.vy *= -1;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+    ctx.fillStyle = this.gold
+      ? `rgba(196,146,58,${this.a})`
+      : `rgba(255,255,255,${this.a*0.4})`;
+    ctx.fill();
+  }
+}
+const pts = Array.from({ length: 50 }, () => new P());
+
+function drawLinks() {
+  for (let i = 0; i < pts.length; i++) {
+    for (let j = i+1; j < pts.length; j++) {
+      const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+      const d  = Math.sqrt(dx*dx + dy*dy);
+      if (d < 88) {
+        ctx.beginPath();
+        ctx.moveTo(pts[i].x, pts[i].y);
+        ctx.lineTo(pts[j].x, pts[j].y);
+        ctx.strokeStyle = `rgba(196,146,58,${(1-d/88)*0.08})`;
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+function loop() {
+  ctx.clearRect(0, 0, cvs.width, cvs.height);
+  pts.forEach(p => { p.update(); p.draw(); });
+  drawLinks();
+  requestAnimationFrame(loop);
+}
+loop();
+
+/* ── LOAD PHOTO FROM CV FILE ── */
+fetch('./CV_JorgeMoguel_Executive_v4.html')
+  .then(r => r.text())
+  .then(html => {
+    const m = html.match(/src="(data:image\/jpeg;base64,[A-Za-z0-9+/=\n\r]{200,})"/);
+    if (!m) return;
+    const src = m[1].replace(/[\r\n]/g,'');
+    const img = document.getElementById('hero-photo');
+    img.onload = () => {
+      img.style.display = 'block';
+      document.getElementById('hero-initials').style.display = 'none';
+    };
+    img.src = src;
+  })
+  .catch(() => {});
+</script>
+
+</body>
+</html>
